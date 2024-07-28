@@ -3,19 +3,19 @@
 
 module rmii_axis_v1_0 #
   (
-   parameter [7:0]  FPGA_IP_1 = 192,
-   parameter [7:0]  FPGA_IP_2 = 168,
-   parameter [7:0]  FPGA_IP_3 = 1,
-   parameter [7:0]  FPGA_IP_4 = 100,
-   parameter [7:0]  HOST_IP_1 = 192,
-   parameter [7:0]  HOST_IP_2 = 168,
-   parameter [7:0]  HOST_IP_3 = 1,
-   parameter [7:0]  HOST_IP_4 = 101,
+   parameter [7:0]  FPGA_IP_1 = 10,
+   parameter [7:0]  FPGA_IP_2 = 0,
+   parameter [7:0]  FPGA_IP_3 = 0,
+   parameter [7:0]  FPGA_IP_4 = 240,
+   parameter [7:0]  HOST_IP_1 = 10,
+   parameter [7:0]  HOST_IP_2 = 0,
+   parameter [7:0]  HOST_IP_3 = 0,
+   parameter [7:0]  HOST_IP_4 = 10,
    parameter [15:0] FPGA_PORT = 17767,
    parameter [15:0] HOST_PORT = 17767,
    parameter [47:0] FPGA_MAC = 48'he86a64e7e830,
    parameter [47:0] HOST_MAC = 48'he86a64e7e829,
-   parameter [15:0] HEADER_CHECKSUM = 16'h65ba,
+   parameter [15:0] HEADER_CHECKSUM = 16'h65b3,
    parameter	    CHECK_DESTINATION = 1
   
    )

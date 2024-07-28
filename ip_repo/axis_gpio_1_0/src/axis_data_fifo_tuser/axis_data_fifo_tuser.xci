@@ -5,7 +5,7 @@
     "cell_name": "sw_axis_i/axis_data_fifo_tuser",
     "component_reference": "xilinx.com:ip:axis_data_fifo:2.0",
     "ip_revision": "12",
-    "gen_directory": "../../../../../Examples/eth_gpio/eth_gpio_bd/eth_gpio.tmp/axis_gpio_v1_0_project/axis_gpio_v1_0_project.gen/sources_1/ip/axis_data_fifo_tuser",
+    "gen_directory": ".",
     "parameters": {
       "component_parameters": {
         "TDATA_NUM_BYTES": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -69,7 +69,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "12" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../Examples/eth_gpio/eth_gpio_bd/eth_gpio.tmp/axis_gpio_v1_0_project/axis_gpio_v1_0_project.gen/sources_1/ip/axis_data_fifo_tuser" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2023.2.2" } ],

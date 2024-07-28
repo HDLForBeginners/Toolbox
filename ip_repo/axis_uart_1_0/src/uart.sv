@@ -24,7 +24,7 @@
 module uart
   #(
     // Clockrate in hz
-    parameter CLKRATE = 100000000,
+    parameter CLKRATE = 50000000,
     // Baud
     parameter BAUD = 115200,
     // word length

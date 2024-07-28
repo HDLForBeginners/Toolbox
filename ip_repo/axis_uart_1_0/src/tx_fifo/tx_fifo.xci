@@ -5,7 +5,7 @@
     "cell_name": "tx_data_fifo_i",
     "component_reference": "xilinx.com:ip:fifo_generator:13.2",
     "ip_revision": "9",
-    "gen_directory": "../../../../../Examples/eth_gpio/eth_gpio_bd/eth_gpio.tmp/axis_uart_v1_0_project/axis_uart_v1_0_project.gen/sources_1/ip/tx_fifo",
+    "gen_directory": ".",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "tx_fifo", "resolve_type": "user", "usage": "all" } ],
@@ -400,7 +400,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "9" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../Examples/eth_gpio/eth_gpio_bd/eth_gpio.tmp/axis_uart_v1_0_project/axis_uart_v1_0_project.gen/sources_1/ip/tx_fifo" } ],
+        "OUTPUTDIR": [ { "value": "." } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2023.2" } ],
