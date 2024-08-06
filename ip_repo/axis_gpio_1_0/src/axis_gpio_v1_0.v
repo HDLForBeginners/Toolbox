@@ -87,8 +87,6 @@ module axis_gpio_v1_0 #
       
       );
    
-   // always ready
-   assign s00_axis_tready = 1;
 
    // SW -> S_AXIS
    // Creates an AXIS master from an input gpio pin

@@ -31,23 +31,23 @@ module uart
     parameter WORD_LENGTH = 8
     )
    (
-    input                   clk,
-    input                   rstn,
+    input		    clk,
+    input		    rstn,
 
     // input slave axis interface
     input [WORD_LENGTH-1:0] s_axis_data,
-    input                   s_axis_valid,
-    input                   s_axis_last,
-    output                  s_axis_ready,
+    input		    s_axis_valid,
+    input		    s_axis_last,
+    output		    s_axis_ready,
 
     // output uart tx signal
-    output                  UART_TX
+    output		    UART_TX
     );
    
    // Interface to a fifo to handle the AXIS handshaking and flow control
-   logic                    fifo_axis_tlast;
-   logic                    fifo_axis_tready;
-   logic                    fifo_axis_tvalid;
+   logic		    fifo_axis_tlast;
+   logic		    fifo_axis_tready;
+   logic		    fifo_axis_tvalid;
    logic [WORD_LENGTH-1:0]  fifo_axis_tdata;
    
    tx_fifo tx_data_fifo_i
@@ -69,22 +69,20 @@ module uart
       .m_axis_tlast(fifo_axis_tlast)    // output wire m_axis_tlast
       );
    
-    uart_tx #(
-        .DATA_WIDTH(WORD_LENGTH)
-    )
-    uart_tx_inst (
-        .clk(clk),
-        .rst(~rstn),
-        // axi input
-        .s_axis_tdata(fifo_axis_tdata),
-        .s_axis_tvalid(fifo_axis_tvalid),
-        .s_axis_tready(fifo_axis_tready),
-        // output
-        .txd(UART_TX),
-        // status
-        .busy(),
-        // configuration
-        .prescale(CLKRATE/(BAUD*8))
-    );
-    
+   uart_tx
+     #(
+       .CLKRATE(CLKRATE),
+       .BAUD(BAUD),
+       .WORD_LENGTH(WORD_LENGTH)
+       )
+   uart_tx_i
+     (
+      .clk(clk),
+      .rst(rst),
+      .tx_data(fifo_axis_tdata),
+      .tx_data_valid(fifo_axis_tvalid),
+      .tx_data_ready(fifo_axis_tready),
+      .UART_TX(UART_TX)
+      );
+   
 endmodule

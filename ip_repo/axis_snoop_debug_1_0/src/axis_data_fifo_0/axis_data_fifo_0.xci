@@ -2,6 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "axis_data_fifo_0",
+    "cell_name": "genblk1[0].genblk1.axis_snoop_fifo_i/snoop_fifo",
     "component_reference": "xilinx.com:ip:axis_data_fifo:2.0",
     "ip_revision": "12",
     "gen_directory": "../../../../../Examples/eth_gpio/eth_gpio_bd/eth_gpio.tmp/axis_snoop_debug_v1_0_project/axis_snoop_debug_v1_0_project.gen/sources_1/ip/axis_data_fifo_0",
